@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SistemasAmortizacionGUI_browser.jnlp">
+  <information>
+    <title>SistemasAmortizacionGUI</title>
+    <vendor>Jose Aguilar Quesada</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SistemasAmortizacionGUI.jar" size="4255" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="sistemasamortizaciongui.SistemasAmortizacionGUI"  name="SistemasAmortizacionGUI" >
+  </applet-desc>
+  <update check="always"/>
+</jnlp>
