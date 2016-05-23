@@ -17,12 +17,13 @@ public class TablaAmortizacion {
     private double totalCuotas;
     private ArrayList<Periodo> periodos;
     
-    void imprimir(){
-        System.out.println("Periodo    Deuda Inicial    Intereses    Amortización    Cuota");
+    String imprimir(){
+        String res = "Periodo   Deuda Inicial   Intereses   Amortización   Cuota";
         for(Periodo periodo : periodos){
-            System.out.println(periodo.getPeriodo()+"          "+periodo.getSaldo()+"       "+periodo.getIntereses()+"       "+periodo.getAmortizacion()+"        "+periodo.getCuota());
+            res +=("\n"+Integer.toString(periodo.getPeriodo())+"         "+Double.toString(periodo.getSaldo())+"   "+Double.toString(periodo.getIntereses())+"   "+Double.toString(periodo.getAmortizacion())+"   "+Double.toString(periodo.getCuota()));
         }
-        System.out.println("                            "+totalIntereses+"          "+totalAmortizacion+"          "+totalCuotas);
+        res += ("\nTotal Intereses: "+totalIntereses+"   Total Amortización: "+totalAmortizacion+"   Total Cuotas: "+totalCuotas);
+        return res;
     }
     
     TablaAmortizacion(){

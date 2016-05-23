@@ -20,14 +20,10 @@ public class DatosDTO {
     private double tipoCambio;
     public TablaAmortizacion tabla;
 
-    public void imprimir(){
-        System.out.println("Nombre del Cliente: " + nombreCliente);
-        System.out.println("Monto solicitado: " + deudaInicial);
-        System.out.println("Plazo: " + plazo + " años");
-        System.out.println("Tasa de interés anual: " + interesAnual);
-        System.out.println("Sistema de amortización: " + sistemaAmortizacion);
-        System.out.println("Moneda: " + moneda);
-        tabla.imprimir();
+    public String imprimir(){
+        String res = "Nombre del Cliente: "+nombreCliente+"\nMonto Solicitado: "+Double.toString(deudaInicial)+"\nPlazo: "+Integer.toString(plazo)+" años\nTasa Anual: "+Double.toString(interesAnual)+" %\nSistema de Amortización: "+sistemaAmortizacion+"\nMoneda: "+moneda+"\n";
+        res += tabla.imprimir();
+        return res;
     }
     public DatosDTO(){
         tabla = new TablaAmortizacion();

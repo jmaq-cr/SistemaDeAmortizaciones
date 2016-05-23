@@ -32,6 +32,5 @@ public class Controlador {
         sistema = creador.crearSistema(datos.getSistemaAmortizacion());
         sistema.generarTabla(datos);
         registroXML.agregarEntrada(datos);
-        datos.imprimir();
     }
 }
